@@ -15,4 +15,14 @@ let getBookings = async()=>{
   });
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const navToggler = document.querySelector(".navbar-toggler");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  navToggler.addEventListener("click", function () {
+    mobileMenu.classList.toggle("d-none");
+  });
+});
+
+
 getBookings();

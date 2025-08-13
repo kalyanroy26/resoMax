@@ -122,6 +122,10 @@ a {
   height: 60vh;
 }
 
+.title{
+  color: var(--bg-color);
+}
+
 .InputContainer {
   height: 50px;
   display: flex;
@@ -164,15 +168,18 @@ a {
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  height: 70vh;
+  height: auto;
   font-family: var(--primary-font);
 }
 
+
 .trip_card img {
   width: 100%;
-  height: 40vh;
-  border-radius: 10px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
 }
+
 
 .details {
   display: flex;

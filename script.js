@@ -59,7 +59,7 @@ let renderTrips = () => {
 
     trips.forEach(trip => {
         container.innerHTML += `
-                    <div class="py-3 trip_card rounded-3 align-items-center justify-content-between col-12 col-md-4 d-flex flex-column">
+                    <div class="py-3 trip_card rounded-3 align-items-center justify-content-between col-12 col-md-5 d-flex flex-column">
                     <div class="col-11 mb-3 mb-md-0">
                         <img src="${trip.image}" alt="${trip.title}" class="img-fluid rounded-3" />
                     </div>
@@ -210,11 +210,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 <option value="debit">Debit Card</option>
               </select>
 
-               <div class="d-flex flex-column rounded-2 fs-5 ms-3">
+               <div class="d-flex flex-column rounded-2 fs-5 ms-3 ">
                 <br />
 
                 <div class="row gy-3 border border-1 rounded-1 p-3">
-                  <div class="col-md-6">
+                  <div class="col-12 col-lg-6">
                     <label for="cc-name" class="form-label">Name on card</label>
                     <input
                       type="text"
@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     />
                     <div class="invalid-feedback">Name on card is required</div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-12 col-lg-6">
                     <label for="cc-number" class="form-label"
                       >Credit card number</label
                     >
@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
                       placeholder=""
                     />
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-12 col-lg-6">
                     <label for="cc-expiration" class="form-label"
                       >Expiration</label
                     >
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function () {
                       required=""
                     />
                   </div>
-                  <div class="col-md-3">
+                  <div class=" col-4 col-md-3">
                     <label for="cc-cvv" class="form-label">CVV</label>
                     <input
                       type="text"
@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
 
           <button
-            class="rounded-2 cb_btn p-3 mb-2 align-self-end"
+            class="rounded-2 cb_btn p-3 mb-2 align-self-sm-end align-self-center"
             id="cb_btn"
             type="button"
             data-bs-toggle="modal"
