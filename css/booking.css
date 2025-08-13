@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #252525;
+  --logo-color: #252525;
+  --bg-color: #fdfdfd;
+  --bg-color-2: #f7f7f7;
+  --text-color: #252525;
+  --text-color-2: #393e46;
+  --logo-font: "Lexend", "sans-serif";
+  --primary-font: "Montserrat", "Poppins", sans-serif;
+  --border-color: rgba(0, 0, 0, 0.125);
+  --image-shadow: 0px 0px 0px rgba(3, 7, 18, 0.1),
+    0px 1px 1px rgba(3, 7, 18, 0.08), 0px 1px 1px rgba(3, 7, 18, 0.06),
+    0px 3px 3px rgba(3, 7, 18, 0.04), 0px 4px 4px rgba(3, 7, 18, 0.02);
+  --image-inside-shadow: 3px -43px 23px 5px rgba(0, 0, 0, 0.67) inset;
+  --card-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
+    -4px -4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: var(--primary-font) !important;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.logo {
+  font-family: var(--logo-font) !important;
+  color: var(--bg-color);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.my-container {
+  padding: 0 !important;
+}
+
+.my-nav {
+  height: 80px;
+}
+
+.nav_section_2 {
+  background-image: url(../assets/bg3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 10vh;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--bg-color);
+  position: relative;
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: var(--primary-font);
+}
+
+.nav__link::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transform: scaleX(0);
+  height: 2px;
+  background-color: var(--logo-color);
+  transform-origin: bottom center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav__link:hover::before {
+  transform: scaleX(1);
+}
+
+.navbar-toggler {
+  color: var(--bg-color) !important;
+  border-color: var(--bg-color) !important;
+}
+
+.navbar-toggler-icon {
+  color: var(--bg-color);
+  border-color: var(--bg-color);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1); /* White icon */
+}
