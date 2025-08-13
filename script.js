@@ -83,7 +83,7 @@ let getTripDetails = (tripId) => {
         return;
     }
     window.localStorage.setItem('trip_details', JSON.stringify(trip))
-    window.location.href = "/pages/booking.html";
+    window.location.href = "./pages/booking.html";
 }
 
 // check availability of vans
