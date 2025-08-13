@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>vanGo</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,8 +12,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/booking.css">
-    <link rel="stylesheet" href="../css/media_queries.css">
+    <link rel="stylesheet" href="../css/booking.css" />
+    <link rel="stylesheet" href="../css/media_queries.css" />
     <link
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
@@ -77,8 +77,205 @@
 
       <!-- trip plans section -->
       <h1 class="mt-5 mb-3 fw-medium text-center">Book Your Trip</h1>
+      <section
+        class="booking_container row my-3 col-12 col-lg-11 rounded-3 gap-3 p-3"
+        id="booking_container"
+      >
+        <div
+          class="passenger_info col-12 col-md-6 rounded-3 p-3 d-flex flex-column gap-3"
+        >
+          <span class="fs-1 ms-1 fw-medium text-center">Trip Details</span>
 
-      
+          <div class="trip_details">
+            <span class="fs-3 fw-medium text-decoration-underline"
+              >Selected Trip</span
+            >
+            <div
+              class="py-3 border border-1 px-2 rounded-3 align-items-center justify-content-between col-12 d-flex mt-2"
+            >
+              <div class="col-4 m-0 p-0">
+                <img
+                  src="https://images.pexels.com/photos/62348/pexels-photo-62348.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
+                  alt="Golden Triangle Tour"
+                  height="100"
+                  class="rounded-3"
+                />
+              </div>
+              <div class="details col-8">
+                <span class="fs-3 fw-medium">Golden Triangle Tour</span>
+                <span class="fs-5"
+                  ><span class="fw-medium">Duration:</span> 6 days, 5
+                  nights</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex flex-column gap-4">
+            <span class="fs-3 fw-medium text-decoration-underline my-2"
+              >Booking Details</span
+            >
+            <span class="contact_details"
+              ><i class="fi fi-rr-phone-call"></i>
+              <input
+                type="text"
+                name="name"
+                id="username"
+                placeholder="Enter Username"
+            /></span>
+
+            <span class="contact_details"
+              ><i class="fi fi-rr-calendar"></i>
+              <input
+                type="date"
+                name="date"
+                id="date"
+                placeholder="choose date"
+            /></span>
+          </div>
+          <button onclick="checkAvailability()" class="btn btn-dark">
+            Check Availability
+          </button>
+        </div>
+
+        <div
+          class="fare_details col-12 col-md-5 rounded-3 pt-2 d-flex flex-column justify-content-evenly"
+        >
+          <div class="border-bottom mb-3 pb-4">
+            <span class="fs-4 text-decoration-underline fw-bold px-2"
+              >Fare Details</span
+            >
+
+            <div class="d-flex justify-content-between px-2 fs-5">
+              <span>Base Fare</span>
+              <span class="fw-medium">₹ 950.00</span>
+            </div>
+
+            <div class="d-flex justify-content-between px-2 fs-5">
+              <span>GST</span>
+              <span class="fw-medium">₹ 47.50</span>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between px-2 fs-5 pb-3">
+            <span class="fs-4 fw-bold">Total Fare</span>
+            <span class="fw-medium">₹ 997.50</span>
+          </div>
+
+          <span class="fw-bold fs-4">Choose Payment Mode:</span>
+          <div
+            class="d-flex flex-column justify-content-between px-2 fs-5 pb-3 mt-3"
+          >
+            <span class="fw-bold fs-4 mb-1">Choose Payment Mode:</span>
+            <div>
+              <select class="form-select" aria-label="Default select example">
+                <option value="credit">Credit Card</option>
+                <option value="upi">UPI App</option>
+                <option value="debit">Debit Card</option>
+              </select>
+
+              <div class="d-flex flex-column rounded-2 fs-5 ms-3">
+                <br />
+
+                <div class="row gy-3 border border-1 rounded-1 p-3">
+                  <div class="col-md-6">
+                    <label for="cc-name" class="form-label">Name on card</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cc-name"
+                      placeholder=""
+                      required=""
+                    />
+                    <div class="invalid-feedback">Name on card is required</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="cc-number" class="form-label"
+                      >Credit card number</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cc-number"
+                      placeholder=""
+                    />
+                  </div>
+                  <div class="col-md-3">
+                    <label for="cc-expiration" class="form-label"
+                      >Expiration</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder=""
+                      required=""
+                    />
+                  </div>
+                  <div class="col-md-3">
+                    <label for="cc-cvv" class="form-label">CVV</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cc-cvv"
+                      placeholder=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header d-flex align-items-center">
+                  <h1 class="modal-title fs-2 text-center" id="exampleModalLabel">
+                    <img src="../assets/icons/check.png" alt="check" height="40" class="me-1">
+                    Confirmation
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-12 d-flex flex-column align-items-center justify-content-center">
+                        <img src="../assets/illustrations/confirmed.png" alt="Success" height="300">
+                        <span class="fs-2 fw-medium text-center">Booking Successfull..</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="rounded-2 cb_btn p-3 mb-2 align-self-end"
+            id="cb_btn"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Continue Booking
+          </button>
+        </div>
+      </section>
     </div>
 
     <footer class="footer-section w-100 rounded-2">
@@ -127,7 +324,7 @@
 
       <!-- Bottom Section -->
       <div class="footer__bottom">
-        <div class="copyright">&copy; 2025 TripEasy. All rights reserved.</div>
+        <div class="copyright">&copy; 2025 VanGo. All rights reserved.</div>
         <div class="terms">
           <span>Terms & Conditions</span>
           <span><pre style="display: inline-block"></pre></span>

@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/media_queries.css">
+    <link rel="stylesheet" href="./css/media_queries.css" />
     <link
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
@@ -74,7 +74,29 @@
             <li class="nav-item mx-2">
               <a href="../index.html" class="nav__link nav-link-style">Help</a>
             </li>
+
+            <li class="nav-item mx-2">
+              <a href="./pages/admin.html" class="nav__link nav-link-style"
+                >Admin</a
+              >
+            </li>
           </ul>
+
+          <!-- mobile menu -->
+          <ul id="mobileMenu" class="mobile-nav d-flex flex-column d-none p-3 gap-3">
+          <li>
+            <a href="./index.html" class="nav__link nav-link-style">Home</a>
+          </li>
+          <li>
+            <a href="./index.html" class="nav__link nav-link-style">Contact</a>
+          </li>
+          <li>
+            <a href="./index.html" class="nav__link nav-link-style">About</a>
+          </li>
+          <li>
+            <a href="./pages/admin.html" class="nav__link nav-link-style">Admin</a>
+          </li>
+        </ul>
         </nav>
 
         <div
@@ -98,7 +120,7 @@
       </div>
 
       <!-- trip plans section -->
-      <h1 class="mt-5 mb-3 fw-medium text-center">Available Trip Plans</h1>
+      <span class="my-5 fw-bold text-center fs-1">Available Trip Plans</span>
       <section class="row trips-section" id="trips_container">
         <!-- <div class="py-3 trip_card rounded-3 align-items-center justify-content-between col-12 col-md-4 d-flex flex-column">
           <div class="col-11 mb-3 mb-md-0">
@@ -166,16 +188,14 @@
 
       <!-- Bottom Section -->
       <div class="footer__bottom">
-        <div class="copyright">&copy; 2025 TripEasy. All rights reserved.</div>
+        <div class="copyright">&copy; 2025 VanGo. All rights reserved.</div>
         <div class="terms">
           <span>Terms & Conditions</span>
           <span><pre style="display: inline-block"></pre></span>
           <span>Privacy Policy</span>
         </div>
         <div class="social__links">
-          <span
-            ><img src="./assets/icons/x.png" loading="lazy" alt="x"
-          /></span>
+          <span><img src="./assets/icons/x.png" loading="lazy" alt="x" /></span>
           <span
             ><img src="./assets/icons/insta.png" loading="lazy" alt="insta"
           /></span>
@@ -186,10 +206,7 @@
               alt="facebook"
           /></span>
           <span
-            ><img
-              src="./assets/icons/youtube.png"
-              loading="lazy"
-              alt="youtube"
+            ><img src="./assets/icons/youtube.png" loading="lazy" alt="youtube"
           /></span>
           <span
             ><img
